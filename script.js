@@ -19,6 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 const surveyData = {
   rank: "",
+  nationality: "", 
   age: "",
   experience: "",
   company: "",
@@ -64,7 +65,7 @@ function renderInfoPage() {
         </div>
         <div>
           <label class="block text-lg font-medium text-blue-900 mb-1">Nationality</label>
-          <input type="text" name="Nationality" required class="w-full border border-blue-300 px-4 py-3 rounded-lg bg-white" />
+          <input type="text" name="nationality" required class="w-full border border-blue-300 px-4 py-3 rounded-lg bg-white" />
         </div>
         <div>
           <label class="block text-lg font-medium text-blue-900 mb-1">Age</label>
@@ -89,6 +90,7 @@ function renderInfoPage() {
     e.preventDefault();
     const data = new FormData(e.target);
     surveyData.rank = data.get("rank");
+    surveyData.nationality = data.get("nationality");
     surveyData.age = data.get("age");
     surveyData.experience = data.get("experience");
     surveyData.company = data.get("company");
@@ -345,6 +347,7 @@ form.addEventListener("submit", (e) => {
   // ✅ Create a clean version of the data for Firestore
   const cleanedData = {
     rank: surveyData.rank || "",
+    nationality: surveyData.nationality || "",
     age: surveyData.age || "",
     experience: surveyData.experience || "",
     company: surveyData.company || "",
