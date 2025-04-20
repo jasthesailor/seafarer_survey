@@ -77,7 +77,7 @@ function renderInfoPage() {
         </div>
         <div>
           <label class="block text-lg font-medium text-blue-900 mb-1">Company (current or last sailed with)</label>
-          <input type="text" name="Company" required class="w-full border border-blue-300 px-4 py-3 rounded-lg bg-white" />
+          <input type="text" name="company" required class="w-full border border-blue-300 px-4 py-3 rounded-lg bg-white" />
         </div>
         <div class="text-center">
           <button type="submit" class="bg-teal-600 hover:bg-teal-700 text-white px-8 py-3 rounded-full text-lg font-semibold">Next</button>
